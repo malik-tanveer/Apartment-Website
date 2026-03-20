@@ -5,16 +5,6 @@ import Button from "../Button";
 const Penthouse = () => {
     return (
         <>
-            <div className="floor-contain">
-                <h1 className="floor">Choose the perfect space for you</h1>
-                <button className="batn">Studio</button>
-                <button className="batn">2-Bedroom</button>
-                <button className="batn">3-Bedroom</button>
-                <button className="batn" style={{backgroundColor: "#000", color: "#fff"}}>
-                    Penthouse
-                </button>
-                <button className="batn">Double height</button>
-            </div>
             <div className="floor-contain1">
                 <div className="num">
                     <p>Unit size</p>
@@ -37,7 +27,7 @@ const Penthouse = () => {
                     </div>
                 </div>
                 <div className="divimg">
-                    <img src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/673ac2fc863f48cfa20de3d4_fp-04.svg" alt="Map Floor " />
+                    <img src="/Floor/penthouse.svg" alt="Map Floor " />
                 </div>
             </div>
         </>

@@ -5,16 +5,6 @@ import Button from "../Button";
 const Bedroom2 = () => {
     return (
         <>
-            <div className="floor-contain">
-                <h1 className="floor">Choose the perfect space for you</h1>
-                <button className="batn">Studio</button>
-                <button className="batn" style={{backgroundColor: "#000", color: "#fff"}}>
-                    2-Bedroom
-                </button>
-                <button className="batn">3-Bedroom</button>
-                <button className="batn">Penthouse</button>
-                <button className="batn">Double height</button>
-            </div>
             <div className="floor-contain1">
                 <div className="num">
                     <p>Unit size</p>
