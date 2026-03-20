@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "../Styles/Section.css";
+import "../Styles/Hero.css";
 import Button from "./Button";
 
-const Section = () => {
+const Hero = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
     }, []);
@@ -16,7 +16,7 @@ const Section = () => {
                 <p className="Luxury-paragraph" data-aos="fade-right">
                     <img
                         className="logo-logo"
-                        src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/673ac0ff4e601b552021e11d_shape-02.svg"
+                        src="/Hero/hero_logo.svg"
                         alt=""
                         data-aos="zoom-in"
                     />
@@ -31,15 +31,15 @@ const Section = () => {
             </div>
             <div className="images-container">
                 <img
-                    src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/673c1e90d8e96f7cdf3bb7d5_hero-image-01.avif"
+                    src="/Hero/hero_main.avif"
                     alt="Luxury Apartments"
                     className="main-image"
                     data-aos="flip-left"
                 />
-                <img src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/673c1fc55769ff6da5780634_hero-image-03.avif" alt="Side View" className="side-image" data-aos="flip-right" />
+                <img src="/Hero/hero_main1.avif" alt="Side View" className="side-image" data-aos="flip-right" />
             </div>
         </div>
     );
 };
 
-export default Section;
+export default Hero;

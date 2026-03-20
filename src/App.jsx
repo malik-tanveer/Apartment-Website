@@ -1,4 +1,4 @@
-import Website from "./Components/Website";
+import Home from "./Components/Home";
 import About from "./Components/About";
 import { Routes, Route } from "react-router-dom";
 import Gallery from "./Components/Gallery";
@@ -15,7 +15,7 @@ function App() {
         <>
         <Navbar/>
             <Routes>
-                <Route path="/" element={<Website />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/Gallery" element={<Gallery/>} />
                 <Route path="/Contact" element={<Contact/>} />

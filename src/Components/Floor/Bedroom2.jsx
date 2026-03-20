@@ -1,6 +1,5 @@
 import React from "react";
 import "../../Styles/Floor.css";
-import Bedrroom2 from "../../../public/assets/floor.svg";
 import Button from "../Button";
 
 const Bedroom2 = () => {
@@ -38,7 +37,7 @@ const Bedroom2 = () => {
                     </div>
                 </div>
                 <div className="divimg">
-                    <img src={Bedrroom2} alt="Map Floor " />
+                    <img src="" alt="Map Floor " />
                 </div>
             </div>
         </>

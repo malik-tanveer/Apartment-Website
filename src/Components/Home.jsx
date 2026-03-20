@@ -1,25 +1,23 @@
-import React from "react";
-import Section from "./Section";
+import Hero from "./Hero";
 import Developer from "./Developer";
 import Luxury from "./Luxury";
 import Floor from "./Floor";
 import Photogallery from "./Photogallery";
 import Comment from "./Comment";
-import "../Styles/Website.css"
 import Location from "./Location";
 import Startgey from "./Startgey";
 import Backvideo from "./Backvideo";
 import Readyapartment from "./Readyapartment";
-import Section1 from "./Section1";
+import Hero1 from "./Hero1";
 
-const Website = () => {
+const Home = () => {
   return (
     <>
-      <Section />
-      <Section1/>
-      {/* <Developer />  ya bhut mushkil ha ya nahi bna ga */} 
+      <Hero />
+      <Hero1 />
+      {/* <Developer />  ya bhut mushkil ha ya nahi bna ga */}
       <Luxury />
-      {/* <Floor /> */}
+      <Floor />
       <Photogallery />
       <Comment />
       <Location />
@@ -30,4 +28,4 @@ const Website = () => {
   );
 };
 
-export default Website;
+export default Home;

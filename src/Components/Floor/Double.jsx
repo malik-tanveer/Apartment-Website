@@ -1,6 +1,5 @@
 import React from "react";
 import "../../Styles/Floor.css";
-import Height from "../../../public/assets/dobleheight.svg";
 import Button from "../Button";
 const Double = () => {
     return (
@@ -35,7 +34,7 @@ const Double = () => {
                     </div>
                 </div>
                 <div className="divimg">
-                    <img src={Height} alt="Map Floor " />
+                    <img src="" alt="Map Floor " />
                 </div>
             </div>
         </>
