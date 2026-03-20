@@ -14,6 +14,7 @@ const Developer = () => {
             <div className="container1" data-aos="fade-up">
                 <div className="dev1" data-aos="fade-right">
                     <h1 style={{ color: "white" }}>
+                        This is most diffilcut but manage this time
                         From Concept to creation by Imprintly
                     </h1>
                     <p>
