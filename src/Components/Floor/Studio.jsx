@@ -1,4 +1,4 @@
-import "../../Styles/Floor.css";
+import "../../Styles/Home/Floor.css";
 import Button from "../../Components/Button";
 
 const Studio = () => {

@@ -1,25 +1,25 @@
-import Hero from "./Hero";
-import Developer from "./Developer";
-import Luxury from "./Luxury";
-import Floor from "./Floor";
-import Photogallery from "./Photogallery";
-import Comment from "./Comment";
-import Location from "./Location";
-import Startgey from "./Startgey";
-import Backvideo from "./Backvideo";
-import Readyapartment from "./Readyapartment";
-import Hero1 from "./Hero1";
+import Hero from "./Home/Hero";
+import Hero1 from "./Home/Hero1";
+import ConceptToCreation from "./Home/ConceptToCreation";
+import Luxury from "./Home/Luxury";
+import Floor from "./Home/Floor";
+import Photogallery from "./Home/Photogallery";
+// import Comment from "./Home/Comment";
+import Location from "./Home/Location";
+import Startgey from "./Home/Startgey";
+import Backvideo from "./Home/Backvideo";
+import Readyapartment from "./Home/Readyapartment";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <Hero1 />
-      <Developer />  
+      <ConceptToCreation />  
       <Luxury />
       <Floor />
       <Photogallery />
-      <Comment />
+      {/* <Comment /> */}
       <Location />
       <Startgey />
       <Backvideo />

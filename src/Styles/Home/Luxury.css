@@ -1,0 +1,137 @@
+.Contain {
+    text-align: center;
+    padding: 120px 40px;
+    background-color: #fff;
+}
+
+.Contain h1 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+.all {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.st {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    min-height: 150px;
+}
+.all .st {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.st:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.st img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.life-text {
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 10px;
+    color: #333;
+}
+@media (max-width: 1080px) {
+    .Contain {
+        padding: 80px 20px;
+    }
+    .Contain h1 {
+        font-size: 45px;
+    }
+}
+@media (max-width: 1034px) {
+    .Contain {
+        padding: 70px 20px;
+    }
+    .Contain h1 {
+        font-size: 40px;
+    }
+    .all {
+        gap: 25px;
+    }
+}
+@media (max-width: 960px) {
+    .Contain {
+        padding: 60px 20px;
+    }
+    .Contain h1 {
+        font-size: 38px;
+    }
+    .all {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .Contain {
+        padding: 50px 15px;
+    }
+    .Contain h1 {
+        font-size: 35px;
+    }
+    .all {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .st img {
+        width: 45px;
+    }
+    .life-text {
+        font-size: 16px;
+    }
+}
+@media (max-width: 576px) {
+    .Contain {
+        padding: 40px 10px;
+    }
+    .Contain h1 {
+        font-size: 32px;
+    }
+    .all {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .st img {
+        width: 40px;
+    }
+    .life-text {
+        font-size: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .Contain {
+        padding: 30px 10px;
+    }
+    .Contain h1 {
+        font-size: 28px;
+    }
+    .all {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .st img {
+        width: 35px;
+    }
+    .life-text {
+        font-size: 14px;
+    }
+}

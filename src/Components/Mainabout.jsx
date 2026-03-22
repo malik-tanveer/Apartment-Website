@@ -1,14 +1,14 @@
-import React from "react";
-import Section1 from "./Hero1";
-import Mission from "./Mission";
-import Award from "./Award";
+// import React from "react";
+// import Section1 from "./Hero1";
+// import Mission from "./Mission";
+// import Award from "./Award";
 
 const Mainabout = () => {
     return (
         <>
-            <Section1 />
+            {/* <Section1 />
             <Mission />
-            <Award />
+            <Award /> */}
         </>
     );
 };

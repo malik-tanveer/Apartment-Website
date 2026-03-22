@@ -1,0 +1,85 @@
+.facts-section {
+  padding: 100px 40px;
+  background: #fff;
+  text-align: center;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 48px;
+  color: #15151a;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.fact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* NUMBER */
+.fact-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: #15151a;
+}
+
+.unit {
+  font-size: 18px;
+  color: #666;
+}
+
+/* TITLE */
+.fact-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* DESCRIPTION */
+.fact-description {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+  max-width: 180px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .facts-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .facts-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .facts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .fact-number {
+    font-size: 32px;
+  }
+}

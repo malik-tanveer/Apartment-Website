@@ -1,0 +1,83 @@
+/* General Styles */
+.readyapartment {
+    padding: 5%;
+    text-align: center;
+}
+
+/* Paragraph Center */
+.pa {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Input Container */
+.iu {
+    margin-top: 20px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Input Fields */
+.input {
+    padding: 10px;
+    gap: 10px;
+    width: 20%;
+    min-width: 200px; /* Ensures input does not get too small */
+}
+
+/* Button Container */
+.bnm {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Submit Button */
+.sub {
+    padding: 12px 20px;
+    background-color: #d8af72;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.sub:hover {
+    background-color: #b28e5c;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .readyapartment {
+        padding: 80px;
+    }
+    .input {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .readyapartment {
+        padding: 60px;
+    }
+    .input {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .readyapartment {
+        padding: 40px;
+    }
+    .input {
+        width: 80%;
+    }
+    .sub {
+        width: 100%;
+    }
+}

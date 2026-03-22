@@ -1,0 +1,116 @@
+.developer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px;
+    background-color: #15151a;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.dev-left {
+    flex: 1;
+    color: #fff;
+}
+
+.dev-left h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.dev-left p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+.btn-container {
+    display: inline-block;
+}
+
+/* Right image */
+.dev-right {
+    flex: 1;
+    text-align: center;
+}
+.dev-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.milestones-section {
+    padding: 60px 50px;
+    text-align: center;
+    background-color: #f8f3ec;
+}
+.milestones-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.milestones-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.milestone {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    min-width: 200px;
+}
+.milestone:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.milestone h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #15151a;
+}
+
+.milestone p {
+    font-size: 16px;
+    color: #555;
+}
+
+.price {
+    color: #d8af72;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .developer-section {
+        padding: 60px 30px;
+        gap: 30px;
+    }
+    .dev-left h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .developer-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .dev-left h1 {
+        font-size: 32px;
+    }
+    .dev-left p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .milestones-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .milestone {
+        min-width: 100%;
+    }
+}

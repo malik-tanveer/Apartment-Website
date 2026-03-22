@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/Floor.css";
+import "../../Styles/Home/Floor.css";
 import Button from "../Button";
 
 const Bedroom2 = () => {
