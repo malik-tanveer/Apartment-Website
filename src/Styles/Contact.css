@@ -1,21 +1,24 @@
+/* === Main Container === */
 .contact-main-container {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  padding: 40px 20px;
+  padding: 50px 40px;
   background-color: #f8f3ec;
 }
 
-/* --- Top Get Started + Map --- */
+/* --- Top: Get Started + Map --- */
 .contact-getstarted-map {
   display: flex;
-  gap: 30px;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .contact-getstarted {
   flex: 1;
+  min-width: 280px;
 }
 
 .contact-title {
@@ -30,7 +33,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 10px 0;
+  margin: 12px 0;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #444;
 }
@@ -42,7 +45,8 @@
 
 .contact-map-container {
   flex: 1;
-  max-width: 500px;
+  max-width: 450px;
+  min-width: 250px;
 }
 
 .contact-map-img {
@@ -52,53 +56,20 @@
   border-radius: 12px;
 }
 
-/* --- Bottom Section: Agent + Form --- */
+/* --- Bottom Section: Form + Agent --- */
 .contact-bottom-section {
   display: flex;
+  justify-content: space-between; /* Form right, agent left */
+  align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
-  justify-content: center;
+  padding: 40px 20px;
 }
 
-.contact-agent {
-  flex: 1;
-  min-width: 250px;
-  max-width: 300px;
-  text-align: start;
-}
-
-.agent-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-.agent-image:hover {
-  transform: scale(1.05);
-}
-
-.agent-name {
-  font-size: clamp(18px, 2vw, 22px);
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.agent-subtitle {
-  font-size: 16px;
-  color: #555;
-}
-
-.contact-info-agent span {
-  font-weight: bold;
-  color: #d8af72;
-  margin-right: 5px;
-}
-
+/* --- Form Styling --- */
 .contact-form-section {
   flex: 2;
-  min-width: 300px;
+  min-width: 320px;
   max-width: 600px;
 }
 
@@ -117,11 +88,20 @@
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: clamp(14px, 1.6vw, 16px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
   transition: all 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: #999;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form-input:focus,
@@ -145,6 +125,7 @@
   font-size: clamp(16px, 1.8vw, 18px);
   cursor: pointer;
   transition: all 0.3s ease;
+  justify-self: end; /* Right align button */
 }
 
 .submit-button:hover {
@@ -152,24 +133,82 @@
   transform: scale(1.05);
 }
 
-/* Responsive */
+/* --- Agent Styling --- */
+.contact-agent {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: start;
+}
+
+.agent-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.agent-image:hover {
+  transform: scale(1.05);
+}
+
+.agent-name {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.agent-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-info-agent {
+  font-size: 16px;
+  color: #444;
+  margin: 6px 0;
+}
+
+.contact-info-agent span {
+  font-weight: bold;
+  color: #d8af72;
+}
+
+/* === Responsive Adjustments === */
 @media (max-width: 1024px) {
   .contact-getstarted-map {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .contact-map-img {
     height: 200px;
+    margin-top: 20px;
   }
 
   .contact-bottom-section {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .submit-button {
     width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-main-container {
+    padding: 40px 20px;
+  }
+
+  .contact-map-img {
+    height: 180px;
+  }
+
+  .submit-button {
+    width: 60%;
   }
 }
 
@@ -183,7 +222,8 @@
   }
 
   .submit-button {
-    width: 70%;
+    width: 80%;
+    justify-self: center;
   }
 
   .agent-name {
@@ -196,5 +236,9 @@
 
   .contact-info-agent {
     font-size: 14px;
+  }
+
+  .contact-map-img {
+    height: 150px;
   }
 }

@@ -6,72 +6,98 @@ import "../Styles/Privacy.css";
 const Privacy = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Ensure the animation occurs only once
+      duration: 1000,
+      once: true,
     });
   }, []);
 
   return (
     <>
       <div className="PRIVACYcontain" data-aos="fade-in">
-        <h1 data-aos="fade-down">Privacy policy</h1>
-        <p data-aos="fade-up">Last updated: April 05, 2024</p>
+        <h1 data-aos="fade-down">Privacy Policy</h1>
+        <p data-aos="fade-up">Last updated: April 02, 2026</p>
       </div>
+
       <div className="privacy-sectionPRIVACY" data-aos="fade-in">
         <div className="container-smallPRIVACY w-containerPRIVACY">
-          <div className="privacy-wrapPRIVACY">
+
+          {/* Collecting Personal Information */}
+          <div className="privacy-wrapPRIVACY" data-aos="fade-in">
             <div className="rich-textPRIVACY w-richtextPRIVACY">
               <h5 data-aos="fade-up">Collecting Personal Information</h5>
               <p data-aos="fade-left">
-                All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making
-                this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined
-                with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The
-                generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic
-                words etc.
+                We collect personal information such as name, email, phone number, and other details you provide when using our services. This helps us improve your experience and communicate effectively.
               </p>
               <ul role="list" data-aos="zoom-in">
-                <li className="llii">There are many variations of passages of Lorem Ipsum available.</li>
-                <li className="llii">Iusto odio dignissimos ducimus qui blanditiis.</li>
-                <li className="llii">Praesentium voluptatum deleniti atque.</li>
-                <li className="llii">Quas molestias excepturi sint occaecati.</li>
+                <li className="llii">Information is collected only with your consent.</li>
+                <li className="llii">We ensure all data is stored securely.</li>
+                <li className="llii">Data may be used for service improvements.</li>
+                <li className="llii">We do not share your data without permission.</li>
               </ul>
-              <p data-aos="fade-right">
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" <em>by Cicero are also reproduced in
-                their exact original form</em>, accompanied by English versions from the 1914 translation by H.
-                Rackham.
-              </p>
             </div>
           </div>
+
+          {/* Sharing Personal Information */}
           <div className="privacy-wrapPRIVACY" data-aos="fade-in">
             <div className="rich-textPRIVACY w-richtextPRIVACY">
               <h5 data-aos="fade-up">Sharing Personal Information</h5>
               <p data-aos="fade-left">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration in some form, by injected humour, or randomised words which don't look even slightly
-                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-                embarrassing <strong>hidden in the middle of text.</strong> All the Lorem Ipsum generators on the
-                Internet tend to repeat predefined chunks as necessary, making this the first true generator on the
-                Internet.
+                We do not sell or rent your personal information. We may share data with trusted partners for service delivery, analytics, or legal compliance.
+              </p>
+              <ol role="list" data-aos="zoom-in">
+                <li className="lllii">Third-party service providers with strict confidentiality.</li>
+                <li className="lllii">Legal authorities when required by law.</li>
+                <li className="lllii">Business partners for essential operations.</li>
+                <li className="lllii">Aggregated anonymous data for analytics.</li>
+              </ol>
+            </div>
+          </div>
+
+          {/* Cookies and Tracking */}
+          <div className="privacy-wrapPRIVACY" data-aos="fade-in">
+            <div className="rich-textPRIVACY w-richtextPRIVACY">
+              <h5 data-aos="fade-up">Cookies and Tracking</h5>
+              <p data-aos="fade-left">
+                Our website may use cookies to enhance user experience, analyze traffic, and personalize content. You can control cookies through your browser settings.
+              </p>
+              <ul role="list" data-aos="zoom-in">
+                <li className="llii">Essential cookies for website functionality.</li>
+                <li className="llii">Analytical cookies to improve services.</li>
+                <li className="llii">Marketing cookies for personalized content.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* User Rights */}
+          <div className="privacy-wrapPRIVACY" data-aos="fade-in">
+            <div className="rich-textPRIVACY w-richtextPRIVACY">
+              <h5 data-aos="fade-up">Your Rights</h5>
+              <p data-aos="fade-left">
+                You have the right to access, update, or delete your personal data. You may also withdraw consent at any time.
+              </p>
+              <ul role="list" data-aos="zoom-in">
+                <li className="llii">Request a copy of your personal data.</li>
+                <li className="llii">Correct inaccuracies in your information.</li>
+                <li className="llii">Request deletion of your personal data.</li>
+                <li className="llii">Opt-out of communications at any time.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Contact for Privacy Concerns */}
+          <div className="privacy-wrapPRIVACY" data-aos="fade-in">
+            <div className="rich-textPRIVACY w-richtextPRIVACY">
+              <h5 data-aos="fade-up">Contact Us</h5>
+              <p data-aos="fade-left">
+                If you have any questions about this Privacy Policy or want to exercise your rights, please contact us at:
               </p>
               <p data-aos="fade-right">
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                Ipsum.
-              </p>
-              <ol start="" role="list" data-aos="zoom-in">
-                <li className="lllii">sometimes on purpose.</li>
-                <li className="lllii">classical Latin literature from 45 BC.</li>
-                <li className="lllii">The Extremes of Good and Evil.</li>
-                <li className="lllii">This book is a treatise on the theory.</li>
-              </ol>
-              <p data-aos="fade-left">
-                Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-                The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
-                non-characteristic words etc.
+                <strong>Email:</strong> privacy@company.com <br/>
+                <strong>Phone:</strong> +1 (123) 456-7890
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </>

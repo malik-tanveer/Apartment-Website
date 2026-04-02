@@ -6,6 +6,9 @@ import Contact from "./Components/Contact";
 import Blog from "./Components/Blog";
 import Privacy from "./Components/Privacy"
 import Faqs from "./Components/Faqs"
+
+import NotFound from "./components/404";
+
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
@@ -13,17 +16,19 @@ import Footer from "./Components/Footer";
 function App() {
     return (
         <>
-        <Navbar/>   
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/About" element={<About />} />
-                <Route path="/Gallery" element={<Gallery/>} />
-                <Route path="/Contact" element={<Contact/>} />
-                <Route path="/Blog" element={<Blog/>} />
-                {/* <Route path="/PrivacyPolicy" element={<Privacy/>} /> */}
-                {/* <Route path="/FAQs" element={<Faqs/>} /> */}
+                <Route path="/Gallery" element={<Gallery />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/Blog" element={<Blog />} />
+                <Route path="/PrivacyPolicy" element={<Privacy />} />
+                <Route path="/FAQs" element={<Faqs />} />
+
+                <Route path="*" element={<NotFound />} />
             </Routes>
-            <Footer/>
+            <Footer />
         </>
     );
 }

@@ -59,8 +59,12 @@ const Faq = () => {
         <>
             <>
                 <div className="faqcontain">
-                    <h1>Frequently asked questions</h1>
-                </div>
+    <h1>Frequently Asked Questions</h1>
+    <p className="faq-description">
+        Here are some of the most common questions our residents and buyers ask. 
+        If you don’t find your answer here, feel free to contact us directly.
+    </p>
+</div>
                 <div className="faq-columns">
                     <div className="faq-column">
                         <div className="faq-accordion">
