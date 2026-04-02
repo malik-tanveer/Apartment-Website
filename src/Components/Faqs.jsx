@@ -56,8 +56,7 @@ const Faq = () => {
     ];
 
     return (
-        <>
-            <>
+        <>s
                 <div className="faqcontain">
     <h1>Frequently Asked Questions</h1>
     <p className="faq-description">
@@ -89,13 +88,12 @@ const Faq = () => {
                 </div>
                 <div className="faqbottom">
                     <h1 data-aos="fade-up">Have more questions?</h1>
-                    <Link className="faqbottom-link">
+                    <Link to="/contact" className="faqbottom-link">
                         <div data-aos="zoom-in">
                             <Button cont="Contact" />
                         </div>
                     </Link>
                 </div>
-            </>
         </>
     );
 };
