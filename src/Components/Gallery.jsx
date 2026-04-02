@@ -15,8 +15,16 @@ const Gallery = () => {
   return (
     <>
       <div className="container">
-        <h1>Our Gallery</h1>
-      </div>
+  <div className="gallery-header">
+    <h1>Our Gallery</h1>
+
+    {/* 🔥 NEW DESCRIPTION */}
+    <p className="gallery-desc">
+      Explore our premium spaces, modern designs, and beautifully crafted living environments.
+      Discover the elegance and comfort that define our residential experience.
+    </p>
+  </div>
+</div>
       <div className="gallery-container">
         <div className="image-container" data-aos="zoom-in">
           <img src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/66f3e382a542e9b079226d90_gallery-image-01.avif" alt="Slider Image 1" className="image" />

@@ -32,20 +32,25 @@ const articles = [
 
 const Blog = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
+        AOS.init({ duration: 800, easing: "ease-in-out", once: true });
     }, []);
 
     return (
         <>
             <div className="Blogcontain" data-aos="flip-down">
-                <h1>Our blog</h1>
+                <div className="blog-header">
+                    <h1>Our Blog</h1>
+                    <p className="blog-desc">
+                        Stay updated with our latest insights, tips, and ideas on apartment living and modern lifestyle. Discover inspiration and expert advice from our team.
+                    </p>
+                </div>
             </div>
 
             <div className="articles-container">
                 {articles.map((article, index) => (
                     <div key={index} className="article-card" data-aos={article.animation}>
                         <div className="image-container">
-                            <img src={article.image} alt={article.title} className="article-image zoom-effect" />
+                            <img src={article.image} alt={article.title} className="article-image" />
                         </div>
                         <span className="article-category">{article.category}</span>
                         <h2 className="article-title">{article.title}</h2>

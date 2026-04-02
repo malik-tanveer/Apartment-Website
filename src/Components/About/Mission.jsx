@@ -1,5 +1,4 @@
-import React from "react";
-import "../Styles/Mission.css";
+import "../../Styles/About/Mission.css";
 
 const Mission = () => {
   return (

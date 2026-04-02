@@ -1,13 +1,13 @@
-import React from 'react'
-import Mainabout from './Mainabout'
+import Hero1 from "./Home/Hero1";
+import Mission from "./About/Mission";
+import Award from "./About/Award";
 
 const About = () => {
   return (
     <>
-    <Mainabout/>
-
-
-    
+    <Hero1 />
+            <Mission />
+            <Award /> 
     </>
   )
 }

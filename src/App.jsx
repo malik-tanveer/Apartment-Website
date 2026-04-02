@@ -16,10 +16,10 @@ function App() {
         <Navbar/>   
             <Routes>
                 <Route path="/" element={<Home />} />
-                {/* <Route path="/About" element={<About />} /> */}
-                {/* <Route path="/Gallery" element={<Gallery/>} /> */}
-                {/* <Route path="/Contact" element={<Contact/>} /> */}
-                {/* <Route path="/Blog" element={<Blog/>} /> */}
+                <Route path="/About" element={<About />} />
+                <Route path="/Gallery" element={<Gallery/>} />
+                <Route path="/Contact" element={<Contact/>} />
+                <Route path="/Blog" element={<Blog/>} />
                 {/* <Route path="/PrivacyPolicy" element={<Privacy/>} /> */}
                 {/* <Route path="/FAQs" element={<Faqs/>} /> */}
             </Routes>
