@@ -1,64 +1,59 @@
 import { useState } from "react";
 import "../Styles/Navbar.css";
-import Button from "./Button";
-import { FaChevronDown, FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
 
   return (
-    <nav>
-      {/* LEFT SIDE */}
-      <div className="left">
-        <div
-          className="hamburger-menu"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <FaBars className="menu-icon" />
-        </div>
+    <>
+      <nav className="navbar">
 
-        <ul className={`main-part ${menuOpen ? "show-menu" : ""}`}>
+        {/* LEFT LINKS */}
+        <ul className="nav-left">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/About">About</Link></li>
           <li><Link to="/Gallery">Gallery</Link></li>
-
-          <li className="pages-item" onClick={toggleDropdown}>
-            Pages <FaChevronDown className="down-arrow" />
-
-            {showDropdown && (
-              <ul className="dropdown-menu">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/About">About</Link></li>
-                <li><Link to="/Gallery">Gallery</Link></li>
-                <li><Link to="/Contact">Contact</Link></li>
-                <li><Link to="/Blog">Blog</Link></li>
-                <li><Link to="/PrivacyPolicy">Privacy Policy</Link></li>
-                <li><Link to="/FAQs">FAQs</Link></li>
-              </ul>
-            )}
-          </li>
         </ul>
-      </div>
 
-      {/* CENTER LOGO */}
-      <div className="logo">
-        <img
-          src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/673ac0cf2dd4689bf7d609aa_apartment.svg"
-          alt="Logo"
-        />
-      </div>
+        {/* LOGO */}
+        <div className="logo">
+          <Link to="/">
+            <img
+              src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/673ac0cf2dd4689bf7d609aa_apartment.svg"
+              alt="logo"
+            />
+          </Link>
+        </div>
 
-      {/* RIGHT SIDE */}
-      <div className="right">
-        <Button cont="Inquire Now" />
+        {/* RIGHT LINKS */}
+        <ul className="nav-right">
+          <li><Link to="/Contact">Contact</Link></li>
+          <li><Link to="/Blog">Blog</Link></li>
+          <li><Link to="/PrivacyPolicy">Privacy</Link></li>
+        </ul>
+
+        {/* HAMBURGER */}
+        <div className="hamburger" onClick={() => setMenuOpen(true)}>
+          <FaBars />
+        </div>
+      </nav>
+
+      {/* SIDEBAR MOBILE */}
+      <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+        <div className="close-btn" onClick={() => setMenuOpen(false)}>
+          <FaTimes />
+        </div>
+
+        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/About" onClick={() => setMenuOpen(false)}>About</Link>
+        <Link to="/Gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
+        <Link to="/Contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        <Link to="/Blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+        <Link to="/PrivacyPolicy" onClick={() => setMenuOpen(false)}>Privacy</Link>
       </div>
-    </nav>
+    </>
   );
 };
 

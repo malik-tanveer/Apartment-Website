@@ -7,7 +7,7 @@ import Blog from "./Components/Blog";
 import Privacy from "./Components/Privacy"
 import Faqs from "./Components/Faqs"
 
-import NotFound from "./components/404";
+import NotFound from "./Components/404";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./Components/Navbar";

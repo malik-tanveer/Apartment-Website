@@ -88,14 +88,6 @@
     font-size: 24px;
     color: #f1c40f;
 }
-.ffoo {
-    padding-top: 5px;
-}
-.footer-contact p {
-    font-size: 16px;
-    color: #bbb;
-    margin-top: 5px;
-}
 
 /* Footer Bottom */
 .footer-bottom {
@@ -142,7 +134,7 @@
 @media (max-width: 1024px) {
     .footer-container {
         grid-template-columns: repeat(3, 1fr);
-        text-align: center;
+      text-align: center;
     }
 
     .footer-links {

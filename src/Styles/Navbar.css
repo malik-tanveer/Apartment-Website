@@ -1,194 +1,140 @@
 * {
-  margin : 0;
-  padding : 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* NAVBAR LAYOUT */
-nav {
-  padding: 12px 25px;
-  background-color: #ffffff;
+
+.navbar {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  padding: 20px 60px;
+  background: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* LEFT SIDE */
-.left {
+/* LEFT & RIGHT */
+.nav-left,
+.nav-right {
   display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-/* RIGHT SIDE */
-.right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-/* NAV LINKS */
-.main-part {
-  display: flex;
-  gap: 25px;
+  gap: 30px;
   list-style: none;
-  position: relative;
 }
 
-/* 🔥 BOLD LINKS */
-.main-part a {
-  font-size: 18px;
-  color: #111;
-  font-weight: 700;              /* BOLD */
-  letter-spacing: 0.6px;
-  text-transform: uppercase;     /* strong feel */
+.nav-left {
+  justify-content: flex-end;
+}
+
+.nav-right {
+  justify-content: flex-start;
+}
+
+/* LINKS */
+.nav-left a,
+.nav-right a {
   text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
   position: relative;
-  transition: all 0.3s ease;
 }
 
-/* 🔥 UNDERLINE ANIMATION */
-.main-part a::after {
+.nav-left a::after,
+.nav-right a::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
   height: 2px;
-  background: #ff6600;
+  background: #d8af72;
+  transform: translateX(-50%);
   transition: 0.3s;
 }
 
-.main-part a:hover::after {
+.nav-left a:hover::after,
+.nav-right a:hover::after {
   width: 100%;
 }
 
-/* HOVER COLOR */
-.main-part a:hover {
-  color: #ff6600;
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #d8af72;
 }
 
-/* CLICK EFFECT */
-.main-part a:active {
-  transform: scale(0.95);
-}
-
-/* DROPDOWN */
-.pages-item {
-  position: relative;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.down-arrow {
-  margin-left: 6px;
-  color: #111;
-}
-
-/* DROPDOWN MENU */
-.dropdown-menu {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  background-color: #ffffff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  list-style: none;
-  border-radius: 8px;
-  min-width: 200px;
-  padding: 8px 0;
-  z-index: 100;
-  animation: fadeIn 0.3s ease;
-}
-
-.dropdown-menu li {
-  width: 100%;
-}
-
-/* DROPDOWN LINKS */
-.dropdown-menu a {
-  display: block;
-  padding: 12px 18px;
-  font-size: 15px;
-  color: #111;
-  font-weight: 600;
-  text-transform: none;
-}
-
-.dropdown-menu a:hover {
-  background: #f5f5f5;
-  color: #ff6600;
-}
-
-/* LOGO CENTER */
+/* LOGO */
 .logo {
   display: flex;
   justify-content: center;
+  padding: 0px 50px;
 }
 
 .logo img {
-  max-width: 120px;
+  width: 130px;
 }
 
 /* HAMBURGER */
-.hamburger-menu {
+.hamburger {
   display: none;
+  font-size: 22px;
   cursor: pointer;
 }
 
-.menu-icon {
-  font-size: 24px;
+/* MOBILE SIDEBAR */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  gap: 25px;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 18px;
   color: #111;
+  font-weight: 600;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.close-btn {
+  font-size: 22px;
+  align-self: flex-end;
+  cursor: pointer;
 }
 
-/* MOBILE RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  nav {
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .navbar {
     grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 15px 20px;
   }
 
   .logo {
-    justify-content: flex-start;
+    order: 1;
   }
 
-  .right {
-    display: none;
-  }
-
-  .main-part {
-    display: none;
-    flex-direction: column;
-    background: #ffffff;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    border-top: 1px solid #ddd;
-  }
-
-  .main-part.show-menu {
-    display: flex;
-  }
-
-  .main-part a {
-    padding: 10px 0;
-  }
-
-  .hamburger-menu {
+  .hamburger {
     display: block;
+    order: 2;
   }
 }

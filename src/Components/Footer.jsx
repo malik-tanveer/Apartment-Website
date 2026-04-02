@@ -1,12 +1,14 @@
 import React from "react";
 import "../Styles/Footer.css";
-import { FaFacebook, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-container">
+
+                {/* LOGO + IMAGE */}
                 <div className="footer-logo-section">
                     <img
                         src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/673ac993342deb5c460060ea_apartment-footer.svg"
@@ -15,12 +17,15 @@ const Footer = () => {
                     />
                     <img
                         src="https://cdn.prod.website-files.com/66f2a1ff6b406660029665a0/66f39f1b82e983b9dc855469_footer-image.avif"
-                        alt="Footer Image"
+                        alt="Footer"
                         className="footer-image"
                     />
                 </div>
+
+                {/* LINKS */}
                 <div className="footer-links">
                     <div className="footer-column">
+                        <h3>Pages</h3>
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/About">About</Link></li>
@@ -28,7 +33,9 @@ const Footer = () => {
                             <li><Link to="/Blog">Blog</Link></li>
                         </ul>
                     </div>
+
                     <div className="footer-column">
+                        <h3>Support</h3>
                         <ul>
                             <li><Link to="/Contact">Contact</Link></li>
                             <li><Link to="/Faqs">FAQs</Link></li>
@@ -37,42 +44,36 @@ const Footer = () => {
                     </div>
                 </div>
 
+                {/* CONTACT + SOCIAL */}
                 <div className="footer-links">
                     <div className="footer-column">
+                        <h3>Contact</h3>
                         <ul>
-                            <li>Style Guide</li>
-                            <li>Instructions</li>
-                            <li>Licenses</li>
-                            <li>Changelog</li>
-                            <li>Coming Soon</li>
+                            <li className="footer-email">
+                                <FaEnvelope /> mtanveerdev.33@gmail.com
+                            </li>
                         </ul>
-                    </div>
-                    <div className="footer-column">
-                        <ul>
-                            <li>Link in Bio</li>
-                            <li>Password Protected</li>
-                            <li>Error 404</li>
-                        </ul>
+
                     </div>
                 </div>
-            </div>
-            <div className="footer-info">
-                <div className="footer-contact">
-                    <h1 className="ffoo">(555) 123-4567</h1>
-                    <p className="ffoo">hello@example.com</p>
-                </div>
-                <div className="footer-address">
-                    <p className="ffoo">Chicago HQ Estica Cop. Macomb, MI 48042</p>
-                </div>
+
             </div>
 
             <hr className="footer-line" />
+
+            {/* BOTTOM */}
             <div className="footer-bottom">
-                <p>Designed by <span className="highlight">Webestica</span>, Powered by <span className="highlight">Webflow</span></p>
+                <p>
+                    © {new Date().getFullYear()} <span className="highlight">Tanveer Dev</span>. All rights reserved.
+                </p>
+
                 <div className="footer-icons">
-                    <a href="#"><FaXTwitter /></a>
-                    <a href="#"><FaWhatsapp /></a>
-                    <a href="https://www.facebook.com/profile.php?id=61569362753063"><FaFacebook /></a>
+                    <a href="https://github.com/malik-tanveer" target="_blank" rel="noreferrer">
+                        <FaGithub />
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+                        <FaLinkedin />
+                    </a>
                 </div>
             </div>
         </footer>
