@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../Styles/Faq.css";
 import {Link} from "react-router-dom";
-import Button from "./Button";
 
 const Faq = () => {
     const [activeTab, setActiveTab] = useState(null);
@@ -85,14 +84,6 @@ const Faq = () => {
                             ))}
                         </div>
                     </div>
-                </div>
-                <div className="faqbottom">
-                    <h1 data-aos="fade-up">Have more questions?</h1>
-                    <Link to="/contact" className="faqbottom-link">
-                        <div data-aos="zoom-in">
-                            <Button cont="Contact" />
-                        </div>
-                    </Link>
                 </div>
         </>
     );
